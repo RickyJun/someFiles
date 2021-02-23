@@ -16,7 +16,7 @@ flutter_weeget_lib_path="https://git.code.tencent.com/qianyu-app/flutter_weeget_
 youxuan_im_plugin="$project_path/youxuan_im_plugin"
 youxuan_im_plugin_path="https://git.code.tencent.com/qianyu-app/youxuan_im_plugin.git"
 youxuan_im_ref=${youxuan_im_ref}
-#flutter clean
+flutter clean
 #==================================拉取子项目
 
 cd $project_path
@@ -84,9 +84,9 @@ then
     fastlane beta_pgyer buildUpdateDescription:$buildUpdateDescription pgyer_api_key:$pgyer_api_key pgyer_user_key:$pgyer_user_key build_flavor_type:$build_flavor_type
 else
     if build_flavor_type="single"
-        apkPath="$project_path/build/app/output/apk/app_android_profile_v1.8.0.apk"
+        apkPath="$project_path/build/app/output/flutter-apk/app-Android-release.apk"
     then
-        apkPath="$project_path/build/app/output/apk/${flavor}/app_${flavor}_profile_${youxuan_im_ref}.apk"
+        apkPath="$project_path/build/app/output/flutter-apk/app-${flavor}-release.apk"
     fi
     flutter build apk --flavor ${flavor}
     curl -F "file=@${apkPath}" -F "_api_key=${pgyer_api_key}" -F "buildUpdateDescription=${buildUpdateDescription}" https://www.pgyer.com/apiv2/app/upload -v
