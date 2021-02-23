@@ -52,11 +52,11 @@ then
 fi
 flutter pub get
 env=${env}
-if env=="dev"
+if [ $env == "dev" ]
 then
     cp lib/main_dev.dart lib/main.dart
 fi
-if env=="test"
+if [ $env=="test" ]
 then
     cp lib/main_test.dart lib/main.dart
 fi
@@ -65,7 +65,7 @@ pgyer_api_key=3f8817b66301d9756829ed5bd8896e5b
 pgyer_user_key=166b0630f11be5d1a25dcb58d5260dc9
 buildUpdateDescription=${buildUpdateDescription}
 build_flavor_type=${build_flavor_type}
-if platform=="ios"
+if [ platform == "ios" ]
 then
     #=================================================证书
     security set-key-partition-list -S apple-tool:,apple: -s -k "123456" ~/Library/Keychains/login.keychain-db
