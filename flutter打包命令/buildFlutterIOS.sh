@@ -83,11 +83,13 @@ then
     
     fastlane beta_pgyer buildUpdateDescription:$buildUpdateDescription pgyer_api_key:$pgyer_api_key pgyer_user_key:$pgyer_user_key build_flavor_type:$build_flavor_type
 else
-    if build_flavor_type="single"
-        apkPath="$project_path/build/app/output/flutter-apk/app-Android-release.apk"
+    if [ $build_flavor_type == "single" ]
     then
+        apkPath="$project_path/build/app/output/flutter-apk/app-android-release.apk"
+        flutter build apk
+    else
         apkPath="$project_path/build/app/output/flutter-apk/app-${flavor}-release.apk"
+        flutter build apk --flavor ${flavor}
     fi
-    flutter build apk --flavor ${flavor}
-    curl -F "file=@${apkPath}" -F "_api_key=${pgyer_api_key}" -F "buildUpdateDescription=${buildUpdateDescription}" https://www.pgyer.com/apiv2/app/upload -v
+    curl -F "file=@$apkPath" -F "_api_key=$pgyer_api_key" -F "buildUpdateDescription=$buildUpdateDescription" https://www.pgyer.com/apiv2/app/upload -v
 fi
