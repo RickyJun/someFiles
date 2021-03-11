@@ -91,6 +91,5 @@ else
         apkPath="$project_path/build/app/outputs/flutter-apk/app-${flavor}-release.apk"
         flutter build apk --flavor ${flavor}
     fi
-    
     curl -F "file=@$apkPath" -F "_api_key=$pgyer_api_key" -F "buildUpdateDescription=$buildUpdateDescription" https://www.pgyer.com/apiv2/app/upload -v
 fi
