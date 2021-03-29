@@ -19,7 +19,6 @@ youxuan_im_ref=${youxuan_im_ref}
 flutter clean
 #==================================拉取子项目
 
-cd $project_path
 isClone=${isClone}
 if $isClone
 then
