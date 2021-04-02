@@ -84,17 +84,17 @@ function expectGit() {
 
 echo "开始构建版本..."
 
-gitlab_account='chennianpeng'
-gitlab_password='123456qwer!!'
-tencent_git_account='WG-chennianpeng'
-tencent_git_password='123456qwer'
-gitee_account='chennianpeng@weeget.cn'
-gitee_password='123456qwer'
-webview_flutter_repository='https://gl.weeget.cn/qianyu-app/webview_flutter.git'
-youxuan_im_plugin_repository='https://gl.weeget.cn/qianyu-app/youxuan_im_plugin.git'
-flutter_weeget_lib_repository='https://gl.weeget.cn/qianyu-app/flutter_weeget_lib.git'
-qiyu_flutter_repository='https://gl.weeget.cn/WG-zhangfeng/qiyu_flutter.git'
-flutter_swiper_repository='https://gl.weeget.cn/WG-zhangfeng/flutter_swiper.git'
+gitlab_account=''
+gitlab_password=''
+tencent_git_account=''
+tencent_git_password=''
+gitee_account=''
+gitee_password=''
+webview_flutter_repository=''
+youxuan_im_plugin_repository=''
+flutter_weeget_lib_repository=''
+qiyu_flutter_repository=''
+flutter_swiper_repository=''
 
 youxuan_im_branch='v1.8.0'
 
@@ -103,8 +103,8 @@ apk_name='优选店主'
 version_name='1.0.0'
 buildInstallType='1' # 1 免密下载 2 密码下载(需要传 buildPassword)
 buildPassword='000000'
-api_key='7fc389c0aeabe0957bd27f2ad4be1bb8'
-user_key='fa97983d46f19996341e175aeda1d7a6'
+api_key='8'
+user_key=''
 fir_api_key=''
 upload_url='https://www.pgyer.com/apiv2/app/upload'
 lane_name='beta_pgyer' # beta_pgyer 构建上传蒲公英 beta_firim 构建上传fir

@@ -7,14 +7,14 @@ git checkout ${branch}
 rvm use 2.7.1
 project_path=$(pwd)
 flutter_swiper="$project_path/flutter_swiper"
-flutter_swiper_path='https://git.code.tencent.com/WG-zhangfeng/flutter_swiper.git'
+flutter_swiper_path=''
 
 webview_flutter="$project_path/webview_flutter"
-webview_flutter_path="https://gitee.com/weeget_1_wenwenjun/webview_flutter.git"
+webview_flutter_path=""
 flutter_weeget_lib="$project_path/flutter_weeget_lib"
-flutter_weeget_lib_path="https://git.code.tencent.com/qianyu-app/flutter_weeget_lib.git"
+flutter_weeget_lib_path=""
 youxuan_im_plugin="$project_path/youxuan_im_plugin"
-youxuan_im_plugin_path="https://git.code.tencent.com/qianyu-app/youxuan_im_plugin.git"
+youxuan_im_plugin_path=""
 youxuan_im_ref=${youxuan_im_ref}
 flutter clean
 #==================================拉取子项目
@@ -60,8 +60,8 @@ then
     cp lib/main_test.dart lib/main.dart
 fi
 platform=${platform}
-pgyer_api_key=3f8817b66301d9756829ed5bd8896e5b
-pgyer_user_key=166b0630f11be5d1a25dcb58d5260dc9
+pgyer_api_key=
+pgyer_user_key=
 buildUpdateDescription=${buildUpdateDescription}
 build_flavor_type=${build_flavor_type}
 if [ platform == "ios" ]
@@ -75,10 +75,10 @@ then
     cd ..
     flutter build ios
     cd ios
-    export FASTLANE_USER=wenwenjun@weeget.cn
-    export APP_IDENTIFIER=cn.weeget.youxuan
+    export FASTLANE_USER=
+    export APP_IDENTIFIER=
     export SCHEME_NAME=Runner
-    export FASTLANE_PASSWORD=344939Wen
+    export FASTLANE_PASSWORD=
     
     fastlane beta_pgyer buildUpdateDescription:$buildUpdateDescription pgyer_api_key:$pgyer_api_key pgyer_user_key:$pgyer_user_key build_flavor_type:$build_flavor_type
 else

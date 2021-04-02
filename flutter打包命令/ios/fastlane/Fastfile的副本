@@ -24,9 +24,9 @@ platform :ios do
   # 更新描述
   buildUpdateDescription = ""
   # 蒲公英 API_KEY
-  pgyer_api_key = "7fc389c0aeabe0957bd27f2ad4be1bb8"
+  pgyer_api_key = ""
   # 蒲公英 USER_KEY
-  pgyer_user_key = "fa97983d46f19996341e175aeda1d7a6"
+  pgyer_user_key = ""
   # fir API_KEY
   fir_api_key = ""
   # flavor 打本地包 single 打默认渠道包 根据 lane_name 的值 上传蒲公英 / fir
